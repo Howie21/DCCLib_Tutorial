@@ -1,15 +1,15 @@
 import React from 'react';
-
+import Book from "../Book/Book"
+import "./BookViewer.css"
 
 const BookViewer = (props) => {
     return ( 
     <div className="row row-spacer">
-        <div className="col-md-4">
+        <div className="col-md-4 previous-button">
             <button onClick={props.previousBook}>Previous Book!</button>
         </div>
         <div className="col-md-4">
-            <h1>{props.book.title}</h1>
-            <h4>{props.book.author}</h4>
+            <Book book={props.book} />
         </div>
         <div className="col-md-4">
             <button onClick={props.nextBook}>Next Book!</button>
